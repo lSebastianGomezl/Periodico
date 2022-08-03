@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css'%}">
+    <title>{% block title %} {% endblock%}
+
+
+    </title>
+</head>
+
+<body>
+    <div class="marco">
+    <div class="title">
+        <div>
+            <h1>MATARON A TRES</h1>
+        </div>
+        <div>
+            <img src="{% static 'images/icono.jpg' %}">
+        </div>
+    </div>
+    </hr>
+        <nav>
+            <a href="/">INICIO</a></li>
+            <a href="/deportes">DEPORTES </a></li>
+            <a href="/contactenos"> CONTACTENOS </a></li>
+        </nav>
+    </div>
+    <div>
+        {% block content %} {% endblock %}
+    </div>
+
+    <footer>
+        Django &copy | Sebastian Gomez Alzate
+    </footer>
+
+</body>
+
+
+</html>

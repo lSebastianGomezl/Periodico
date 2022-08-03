@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% load static%}
+
+{% block title %} {% endblock %} {% block content %}
+
+<h1 class="noticiasN"> NOTICIAS MAS DESTACADAS </h1>
+
+<div class="hola">
+    {% for n in noticias %}
+    <div class="parrafo">
+        <h3 class="title2">{{n.type_notice | title}}</h3>
+        <h5 class="title2">{{n.first_name}}</h5>
+        {% if n.imagen %}
+        <img class="imagNotice" src="{{ n.imagen.url}}">
+        {% endif %}
+        <p>{{n.description}}</p>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
